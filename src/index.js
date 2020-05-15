@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Admin from './Admin';
+import Router from './router';
 import * as serviceWorker from './serviceWorker';
 import './style/reset.css'
 
 ReactDOM.render(
-    <Admin />,
+  <Router />,
   document.getElementById('root')
 );
 

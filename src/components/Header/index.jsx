@@ -36,7 +36,7 @@ class Header extends Component {
             <header className="header">
                 <Row className="header-top">
                     <Col span="24">
-                        <span>欢迎： {userName}</span>
+                        <span>欢迎：{userName}</span>
                         <a href="/">退出</a>
                     </Col>
                 </Row>
