@@ -1,10 +1,18 @@
+@import '~defaultStyle/default.less';
+
 .container{
+    display: flex;
     .nav{
         height: calc(100vh);
         background-color: #001529;
     }
     .main{
+        flex: 1;
+        height: calc(100vh);
+        background-color: @colorL;
+        overflow: auto;
         .content{
+            position: relative;
             padding: 20px;
         }
     }

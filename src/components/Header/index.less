@@ -1,5 +1,8 @@
+@import '~defaultStyle/default.less';
+
 .header{
-    font-size: 14px;
+    background-color: @colorM;
+    font-size: @fontE;
     .header-top{
         padding: 0 20px;
         line-height: 60px;
@@ -13,8 +16,17 @@
         padding: 0 20px;
         line-height: 40px;
         .title{
-            font-size: 18px;
+            font-size: @fontC;
             text-align: center;
+            &::after{
+                position: absolute;
+                content: '';
+                top: 40px;
+                left: 88px;
+                border-top: 10px solid @colorM;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+            }
         }
         .day{
             text-align: right;

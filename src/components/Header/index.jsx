@@ -11,7 +11,7 @@ class Header extends Component {
     }
 
     getDayAPIData = () => {
-        let city = '河北衡水枣强'
+        let city = '河北衡水'
         axios.jsonp({
             url: 'http://api.map.baidu.com/telematics/v3/weather?location='+encodeURIComponent(city)+'&output=json&ak=3p49MVra6urFRGOT9s8UBWr2'
         })
@@ -33,10 +33,10 @@ class Header extends Component {
     render() {
         let { userName, sysTem, dayPictureUrl, weather } = this.state;
         return (
-            <div className="header">
+            <header className="header">
                 <Row className="header-top">
                     <Col span="24">
-                        <span>欢迎 {userName}</span>
+                        <span>欢迎： {userName}</span>
                         <a href="/">退出</a>
                     </Col>
                 </Row>
@@ -50,7 +50,7 @@ class Header extends Component {
                         <span className="weather-detial">{weather}</span>
                     </Col>
                 </Row>
-            </div>
+            </header>
         )
     }
 }
