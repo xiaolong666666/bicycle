@@ -18,5 +18,5 @@ module.exports = override(
             javascriptEnabled: true,
             modifyVars: { '@primary-color': '#E066FF' },
         },
-     }),
+    }),
 );

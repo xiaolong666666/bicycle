@@ -1,4 +1,5 @@
 import React from 'react';
+import './api/basic'
 
 const App = (props) => {
     return (
