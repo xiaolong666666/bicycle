@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Col } from 'antd'
-import Until from './../../until'
+import Utils from './../../utils'
 import './index.less'
 import axios from './../../axios'
 
@@ -24,9 +24,9 @@ const Header = () => {
 
     useEffect(()=>{
         setUserName("小龙")
-        setSysTem(Until.formatDate(new Date().getTime()))
+        setSysTem(Utils.formatDate(new Date().getTime()))
         setInterval(() => {
-            setSysTem(Until.formatDate(new Date().getTime()))
+            setSysTem(Utils.formatDate(new Date().getTime()))
         }, 1000);
         getDayAPIData();
     },[])

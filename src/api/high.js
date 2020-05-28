@@ -2,12 +2,12 @@ import Mock from 'mockjs'
 
 Mock.setup({ timeout: 1000 })
 
-Mock.mock(/\/api\/basic*?/, 'get', (options) => {
+Mock.mock(/\/api\/high*?/, 'get', (options) => {
     const nowpage = options.url.substr(options.url.indexOf('?') + 1).split('=')[1]
     return Mock.mock({
         success: true,
         // 属性 list 的值是一个数组，其中含有 1 到 5 个元素
-        'list|3-5': [{
+        'list|10-20': [{
             // 属性 id 是一个自增数，起始值为 1，每次增 1
             'key|+1': 0,
             // 属性 userId 是一个5位的随机码
@@ -22,7 +22,7 @@ Mock.mock(/\/api\/basic*?/, 'get', (options) => {
             'time|1': '@date(HH:mm:ss)'
         }],
         page: parseInt(nowpage),
-        page_size: 10,
+        page_size: 20,
         total: 100
     })
 })
