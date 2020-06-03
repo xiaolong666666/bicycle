@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Card, Tabs, message } from 'antd'
 import { PlusOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons'
+import 'defaultStyle/common.less'
 import './ui.less'
 
 const { TabPane } = Tabs 

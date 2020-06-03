@@ -26,7 +26,7 @@ const Nav = () => {
     },[])
 
     return (
-        <div>
+        <div className='nav-left'>
             <div className="logo">
                 <img src="/assets/logo-ant.svg" alt="logo" />
                 <h2>Imooc MS</h2>

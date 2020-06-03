@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Button, Modal } from 'antd'
+import 'defaultStyle/common.less'
 import './ui.less'
 
 const Modals = () => {

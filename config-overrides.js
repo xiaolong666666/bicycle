@@ -9,7 +9,6 @@ module.exports = override(
     // antd按需加载
     fixBabelImports('antd', {
         libraryDirectory: 'es',
-        style: 'css',
         style: true,
     }),
     // antd主体设置

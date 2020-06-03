@@ -1,6 +1,14 @@
 @import '~defaultStyle/default.less';
 @import '~defaultStyle/loading.less';
 
+.clearfix{
+    &::after{
+        content: ' ';
+        clear: both;
+        display: block;
+    }
+}
+
 .container{
     display: flex;
     .nav{
@@ -17,3 +25,21 @@
         }
     }
 }
+
+.wrapper {
+    &.detail-wrapper{
+        background: #fff;
+    }
+    flex: 1;
+    overflow: hidden;
+    .card-wrapper{
+        margin-bottom: 10px;
+        button{
+            margin-right: 10px;
+        }
+    }
+    .table-wrapper{
+        margin-top: -1px;
+    }
+}
+

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Row, Col, Modal } from 'antd'
+import 'defaultStyle/common.less'
 import './ui.less'
 
 const { Meta } = Card
@@ -20,6 +21,7 @@ const Gallery = () => {
             <Meta title={"Little Gragon " + item} description={"小 龙 " + item} />
         </Card>
     ))
+    
     const imgShow = imgList.map((item, index) => <Col md={4} key={index}>{item}</Col>)
 
     return (

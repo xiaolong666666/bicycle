@@ -2,11 +2,22 @@
 
 .header{
     background-color: @colorM;
+    flex: 1;
     font-size: @fontE;
     .header-top{
         padding: 0 20px;
         line-height: 60px;
         text-align: right;
+        .logo{
+            font-size: 18px;
+            line-height: 60px;
+            text-align: left;
+            img{
+                margin: 0 10px;
+                height: 40px;
+                vertical-align: middle;
+            }
+        }
         a{
             margin: 0 0 0 20px;
         }
@@ -43,5 +54,12 @@
                 margin: 0 0 0 10px;
             }
         }
+    }
+}
+
+.simple-page{
+    .header-top{
+        background: #1890ff;
+        color: @colorM;
     }
 }

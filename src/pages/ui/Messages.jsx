@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button, message } from 'antd'
+import 'defaultStyle/common.less'
 import './ui.less'
 
 const showMessage = type => {

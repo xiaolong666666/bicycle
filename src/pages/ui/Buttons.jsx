@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Button, Radio } from 'antd'
 import { PlusOutlined, EditOutlined, DeleteOutlined, SearchOutlined, DownloadOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons';
+import 'defaultStyle/common.less'
 import './ui.less'
 
 const Buttons = () => {

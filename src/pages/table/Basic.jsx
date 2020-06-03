@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Card, Table, Modal, Button, message } from 'antd'
 import axios from './../../axios'
 import Utils from './../../utils'
-import './table.less'
+import 'defaultStyle/common.less'
 
 const columns = [
     {

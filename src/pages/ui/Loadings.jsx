@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Spin, Alert } from 'antd'
 import { SlackOutlined, LoadingOutlined } from '@ant-design/icons'
+import 'defaultStyle/common.less'
 import './ui.less'
 
 const antIcon = <SlackOutlined style={{ fontSize: 24 }} spin />
@@ -9,13 +10,13 @@ const antLoading = <LoadingOutlined style={{ fontSize: 24 }} spin />
 const Loadings = () => {
     return (
         <div className="wrapper">
-            <Card title="Spin用法">
+            <Card title="Spin用法" className="card-wrapper">
                 <Spin size="small"/>
                 <Spin style={{margin: '0 10px'}}/>
                 <Spin size="large"/>
                 <Spin indicator={antIcon} style={{marginLeft: 10}}/>
             </Card>
-            <Card title="内容遮罩">
+            <Card title="内容遮罩" className="card-wrapper">
                 <Alert message="React" description="欢迎来到 LittleDragon 共享单车项目" type="success" showIcon className="mask-wrapper"/>
                 <Spin>
                     <Alert message="React" description="欢迎来到 LittleDragon 共享单车项目" type="info" showIcon className="mask-wrapper"/>

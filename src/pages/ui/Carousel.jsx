@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Carousel } from 'antd';
+import 'defaultStyle/common.less'
 import './ui.less'
 
 let onChange = (a, b, c) => {

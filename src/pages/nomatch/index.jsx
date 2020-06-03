@@ -1,8 +1,9 @@
 import React from 'react';
+import 'defaultStyle/common.less'
 
 const Nomatch = () => {
     return (
-        <div>
+        <div className="wrapper">
             404 Nomatch 页面
         </div>
     );

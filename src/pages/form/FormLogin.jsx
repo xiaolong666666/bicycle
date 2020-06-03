@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Form, Input, Button, Checkbox, message } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import 'defaultStyle/common.less'
 import './form.less'
 
 const FormLogin = () => {

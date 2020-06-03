@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Card, Form, Input, Radio, InputNumber, Select, Badge, Switch, DatePicker, TimePicker, Upload, Checkbox, Button, message } from 'antd'
 import { LoadingOutlined, PlusOutlined } from '@ant-design/icons'
 import moment from 'moment'
+import 'defaultStyle/common.less'
 import './form.less'
 
 const { Item } = Form

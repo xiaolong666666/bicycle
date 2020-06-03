@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Card, Table, Badge, Button, Modal, message } from 'antd'
 import axios from './../../axios'
-import './table.less'
+import 'defaultStyle/common.less'
 
 class High extends Component {
 
@@ -627,7 +627,6 @@ class High extends Component {
 
         const { columns, columns2, columns3, columns4 } = this
         const { dataSource } = this.state
-        console.log(this.state.sortOrder)
 
         return (
             <div className='wrapper'>

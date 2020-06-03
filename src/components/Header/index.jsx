@@ -4,7 +4,7 @@ import Utils from './../../utils'
 import './index.less'
 import axios from './../../axios'
 
-const Header = () => {
+const Header = ({ menuType }) => {
     let [sysTem, setSysTem] = useState('')
     let [userName, setUserName] = useState('')
     let [dayPictureUrl, setDayPictureUrl] = useState('')
@@ -34,21 +34,32 @@ const Header = () => {
     return (
         <header className="header">
             <Row className="header-top">
-                <Col span="24">
+                {
+                    menuType
+                    ? <Col span="6" className='logo'>
+                       <img src="/assets/logo-ant.svg" alt=""/>
+                       <span>Little Dragon后台管理系统</span>
+                    </Col>
+                    : null
+                }
+                <Col span={menuType?"18":"24"}>
                     <span>欢迎：{userName}</span>
                     <a href="/">退出</a>
                 </Col>
             </Row>
-            <Row className="breadcrumb">
-                <Col span="4" className="title">首页</Col>
-                <Col span="20" className="day">
-                    <span className="date">{sysTem}</span>
-                    <span className="weather-img">
-                        <img src={dayPictureUrl} alt="loading..." />
-                    </span>
-                    <span className="weather-detial">{weather}</span>
-                </Col>
-            </Row>
+            {
+                menuType ? '' :
+                <Row className="breadcrumb">
+                    <Col span="4" className="title">首页</Col>
+                    <Col span="20" className="day">
+                        <span className="date">{sysTem}</span>
+                        <span className="weather-img">
+                            <img src={dayPictureUrl} alt="loading..." />
+                        </span>
+                        <span className="weather-detial">{weather}</span>
+                    </Col>
+                </Row>
+            }
         </header>
     );
 };
