@@ -1,21 +1,41 @@
-import JsonP from 'jsonp'
+// import JsonP from 'jsonp'
 import axios from 'axios'
 import { Modal } from 'antd'
+import Utils from './../utils'
 
 export default {
-    jsonp(params){
-        return new Promise((resolve,reject)=>{
-            JsonP(params.url,{
-                param: 'callback'
-            },(err,response)=>{
-                if(response.status === "success"){
-                    resolve(response)
-                }else{
-                    reject(response.message)
-                }
-            })
+    requestList(url, param, setDataSource, setPagination, request, setSelectedRowKeys, isMock) {
+        var data = {
+            params: param,
+            isMock
+        }
+        this.ajax({
+            url,
+            data
+        }).then(res=>{
+            if(res && res.success){
+                setDataSource(res.list)
+                setPagination(Utils.pagination(res, current => {
+                    param.page = current
+                    request()
+                }))
+                setSelectedRowKeys(null)
+            }
         })
     },
+    // jsonp(params){
+    //     return new Promise((resolve,reject)=>{
+    //         JsonP(params.url,{
+    //             param: 'callback'
+    //         },(err,response)=>{
+    //             if(response.status === 200){
+    //                 resolve(response)
+    //             }else{
+    //                 reject(response.message)
+    //             }
+    //         })
+    //     })
+    // },
     ajax(options) {
         let loading;
         if (options.data && options.data.isShowLoading !== false) {

@@ -1,11 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux'
 import Router from './router';
+import Store from './redux/store'
 import * as serviceWorker from './serviceWorker';
 import './style/reset.css'
 
+const store = Store()
+
 ReactDOM.render(
-  <Router />,
+  <Provider store={store}>
+    <Router />
+  </Provider>,
   document.getElementById('root')
 );
 

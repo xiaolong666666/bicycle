@@ -1,3 +1,6 @@
+import React from 'react'
+import { Select } from 'antd'
+const { Option } = Select
 export default {
     formatDate(time){
         if(!time) return '';
@@ -21,6 +24,27 @@ export default {
                 return `共${data.total}条`
             },
             showQuickJumper: true
+        }
+    },
+    getOptionList(data){
+        if(!data){
+            return []
+        }
+        let options = []
+        data.map(item=>{
+            options.push(<Option key={item.id} value={item.id}>{item.name}</Option>)
+            return true
+        })
+        return options
+    },
+    updateRowClick(setSelectedRows, setSelectedRowKeys, record, index, setSelectedIds, ids){
+        if(ids){
+            setSelectedRows(record)
+            setSelectedRowKeys(index)
+            setSelectedIds(ids)
+        }else{
+            setSelectedRows(record)
+            setSelectedRowKeys(index)
         }
     }
 }
